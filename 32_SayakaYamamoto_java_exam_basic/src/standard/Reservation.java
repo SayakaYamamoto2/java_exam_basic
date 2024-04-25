@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class JamaicaReservationSystem {
+public class Reservation {
 	public static void main(String[] args) throws IOException{
 		
 //		座席を作成→座席の型をseatに指定。要素30。番号は添え字で管理
@@ -22,6 +22,7 @@ public class JamaicaReservationSystem {
 //　　　質問を出力。readLineで受付待ちをして、相手に数字を入力してもらう。		
 		System.out.println("ようこそジャマイカホールへ！");
 		System.out.println("何番の座席を予約しますか？(1～30)");
+		System.out.println(">");
 		
 		BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
 		String str=reader.readLine();
@@ -33,7 +34,7 @@ public class JamaicaReservationSystem {
 			System.out.println("※予約済みの座席です。他の席を選択してください。");
 		}else{	
 			System.out.println("座席の予約が完了しました。");
-//	　　予約したい
+//	　　予約
 			seat[num-1]=true;
 			
 		}
